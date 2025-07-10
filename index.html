@@ -17,6 +17,8 @@
       background-color: #003c1f;
       color: #ffffff;
       overflow-x: hidden;
+      padding-top: 80px; /* compensate for fixed header height */
+      padding-bottom: 80px; /* space for sticky footer */
     }
 
     header {
@@ -26,12 +28,17 @@
       padding: 15px 5%;
       background-color: #002910;
       flex-wrap: wrap;
-      position: relative;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     header img {
       height: 50px;
       max-width: 100%;
+      border-radius: 10px;
     }
 
     .nav-toggle {
@@ -197,6 +204,10 @@
       font-size: 0.85rem;
       color: #999;
       background-color: #002910;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
     }
 
     footer a {
@@ -220,18 +231,13 @@
       50% { transform: scale(1.2);}
       100% { transform: scale(1);}
     }
-
-    /* Responsive adjustments omitted for brevity, same as your original code… */
-
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="$OKE Logo" style="border-radius: 10px;" />
-
+    <img src="logo.png" alt="$OKE Logo" />
     <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-
     <nav>
       <a href="#about">About</a>
       <a href="https://dexscreener.com/solana/gqxm5mwhuh6brvso6wyb8iq8t7d54nznbab5aneplcpt" target="_blank">Chart</a>
@@ -240,7 +246,6 @@
   </header>
 
   <section class="hero">
-    <!-- MODIFIED IMAGE TAG BELOW -->
     <img 
       src="hero.png" 
       alt="$OKE Meme" 
@@ -250,7 +255,7 @@
     />
     <h1>$OKE - The Universal Meme</h1>
     <p>
-      Its potential isn’t in promises it’s in the meme. One word: “oke 👍”.
+      Its potential isn’t in promises—it’s in the meme. One word: “oke 👍”.
       A classic Pepe meme that needs no explanation, destined to become Solana’s universal meme currency.
     </p>
     <span class="oke-animated">OKE 👍</span>
@@ -264,14 +269,12 @@
       $OKE is the meme-currency for Solana’s degen community.
       It’s simple, viral-ready, and universally understood. The lazier the meme, the more honest it feels,
       which is why $OKE might become Solana’s shared degen language. Comment “oke,” drop an “oke” sticker,
-      or flash a Pepe giving a thumbs up it’s all a stealth call to pump. No complex roadmaps. Just pure meme.
+      or flash a Pepe giving a thumbs up—it’s all a stealth call to pump. No complex roadmaps. Just pure meme.
     </p>
     <div class="contract">
       Contract:
       <span id="contract-address">GH2rnaLDnkqGAuDyCDAASAVQWUU29rQRzv3LpV1kbonk</span>
-      <button id="copy-btn" class="copy-button" title="Copy contract">
-        📋
-      </button>
+      <button id="copy-btn" class="copy-button" title="Copy contract">📋</button>
       <span id="copy-success" class="copy-success">Copied!</span>
     </div>
   </section>
