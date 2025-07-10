@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>$OKE - The Universal Meme of Solana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #003c1f;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 10%;
+      background-color: #002910;
+    }
+
+    header img {
+      height: 60px;
+    }
+
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ffcc00;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+
+    .hero h1 {
+      font-family: 'Press Start 2P', cursive;
+      color: #ffcc00;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px #000;
+    }
+
+    .hero p {
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      color: #dddddd;
+    }
+
+    .buy-button {
+      background: linear-gradient(45deg, #00ff88, #00cc66);
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+
+    .buy-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00ff88;
+    }
+
+    .section {
+      padding: 50px 10%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffcc00;
+      font-family: 'Press Start 2P', cursive;
+      text-shadow: 1px 1px #000;
+    }
+
+    .section p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #dddddd;
+    }
+
+    .contract {
+      margin-top: 20px;
+      font-family: monospace;
+      background-color: #004d26;
+      padding: 10px;
+      border-radius: 5px;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+
+    .copy-button {
+      background: none;
+      border: none;
+      color: #00ff88;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-left: 10px;
+      transition: transform 0.2s;
+    }
+
+    .copy-button:hover {
+      transform: scale(1.3);
+    }
+
+    .copy-success {
+      display: none;
+      margin-left: 10px;
+      color: #ffcc00;
+      font-size: 0.9rem;
+    }
+
+    .meme-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .meme-gallery img {
+      width: 200px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .meme-gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10%;
+      font-size: 0.9rem;
+      color: #999;
+      background-color: #002910;
+    }
+
+    /* Animated OKE text */
+    .oke-animated {
+      display: inline-block;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 1.5rem;
+      color: #00ff88;
+      animation: pulse 1.5s infinite;
+      margin-top: 10px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1);}
+      50% { transform: scale(1.2);}
+      100% { transform: scale(1);}
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      header nav {
+        margin-top: 10px;
+      }
+      .hero img {
+        max-width: 200px;
+      }
+      .section p {
+        font-size: 1rem;
+      }
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+      .buy-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo.png" alt="$OKE Logo" style="border-radius: 10px;" />
+    <nav>
+      <a href="#about">About</a>
+      <a href="https://dexscreener.com/solana/gqxm5mwhuh6brvso6wyb8iq8t7d54nznbab5aneplcpt">Chart</a>
+      <a href="https://raydium.io/swap/?inputMint=sol&outputMint=GH2rnaLDnkqGAuDyCDAASAVQWUU29rQRzv3LpV1kbonk">Buy $OKE</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="hero.png" alt="$OKE Meme" />
+    <h1>$OKE - The Universal Meme</h1>
+    <p>
+      Its potential isn’t in promises—it’s in the meme. One word: “oke 👍”. 
+      A classic Pepe meme that needs no explanation, destined to become Solana’s universal meme currency.
+    </p>
+    <span class="oke-animated">OKE 👍</span>
+    <br /><br />
+    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=GH2rnaLDnkqGAuDyCDAASAVQWUU29rQRzv3LpV1kbonk" class="buy-button">Buy $OKE</a>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About $OKE</h2>
+    <p>
+      $OKE is the meme-currency for Solana’s degen community.
+      It’s simple, viral-ready, and universally understood. The lazier the meme, the more honest it feels
+      which is why $OKE might become Solana’s shared degen language. Comment “oke,” drop an “oke” sticker, 
+      or flash a Pepe giving a thumbs up it’s all a stealth call to pump. No complex roadmaps. Just pure meme.
+    </p>
+    <div class="contract">
+      Contract: 
+      <span id="contract-address">GH2rnaLDnkqGAuDyCDAASAVQWUU29rQRzv3LpV1kbonk</span>
+      <button id="copy-btn" class="copy-button" title="Copy contract">
+        📋
+      </button>
+      <span id="copy-success" class="copy-success">Copied!</span>
+    </div>
+  </section>
+
+  <section class="section" id="memes">
+    <h2>OKE Memes</h2>
+    <p>Spread the meme. Use Pepe. Say “oke.” That’s it. That’s the alpha.</p>
+    <div class="meme-gallery">
+      <img src="hero.png" alt="OKE Meme 1" style="width: 60%; max-width: 50%; height: auto;" />
+      <!-- Add more images here if desired -->
+    </div>
+  </section>
+
+  <section class="section" id="buy">
+    <h2>Buy $OKE</h2>
+    <p>Get your bags ready. Oke?</p>
+    <br>
+    <a href="https://raydium.io/swap/?inputMint=sol&outputMint=GH2rnaLDnkqGAuDyCDAASAVQWUU29rQRzv3LpV1kbonk" class="buy-button">Buy on Solana DEX</a>
+  </section>
+
+  <footer>
+    &copy; 2025 $OKE Meme Token. All rights reserved.
+    <br><br>
+    <a href="https://x.com/i/communities/1943161109726232659" target="_blank" style="color: #00ff88; text-decoration: none; margin-right: 15px;">
+      Twitter
+    </a>
+    <a href="https://dexscreener.com/solana/gqxm5mwhuh6brvso6wyb8iq8t7d54nznbab5aneplcpt" target="_blank" style="color: #00ff88; text-decoration: none;">
+      Dexscreener
+    </a>
+  </footer>
+
+  <script>
+    const copyBtn = document.getElementById('copy-btn');
+    const contractAddress = document.getElementById('contract-address');
+    const copySuccess = document.getElementById('copy-success');
+
+    copyBtn.addEventListener('click', () => {
+      const text = contractAddress.textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        copySuccess.style.display = 'inline';
+        setTimeout(() => {
+          copySuccess.style.display = 'none';
+        }, 2000);
+      }).catch(err => {
+        alert('Failed to copy!');
+      });
+    });
+  </script>
+
+</body>
+</html>
